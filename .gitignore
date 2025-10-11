@@ -36,6 +36,13 @@ prisma/dev.db
 # Prisma
 backend/prisma/migrations/
 batch-service/prisma/migrations/
+# Logs
+logs/
+*.log
+backend/logs/
+batch-service/logs/
+*.sqlite
+
 # Testing
 coverage/
 .nyc_output/
