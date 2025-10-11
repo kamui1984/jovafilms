@@ -1,0 +1,26 @@
+{
+  "name": "jovafilms-batch-service",
+  "version": "1.0.0",
+  "description": "Servicio batch para validación de reseñas",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "prisma:generate": "prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.7.0",
+    "node-cron": "^3.0.3",
+    "dotenv": "^16.3.1",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@types/node-cron": "^3.0.11",
+    "typescript": "^5.3.3",
+    "prisma": "^5.7.0",
+    "ts-node": "^10.9.2",
+    "nodemon": "^3.0.2"
+  }
+}

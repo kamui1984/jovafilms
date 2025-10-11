@@ -1,0 +1,62 @@
+// Prisma Schema para JovaFilms
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  name      String
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  reviews   Review[]
+
+  @@map("users")
+}
+
+model Movie {
+  id        Int      @id @default(autoincrement())
+  hashCode  String   @unique @map("hash_code")
+  title     String
+  year      Int
+  director  String
+  cast      String   // JSON string con array de actores
+  synopsis  String   @db.Text
+  genre     String
+  posterUrl String?  @map("poster_url")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  reviews   Review[]
+
+  @@index([title])
+  @@index([year])
+  @@index([director])
+  @@index([genre])
+  @@map("movies")
+}
+
+model Review {
+  id        Int      @id @default(autoincrement())
+  userId    Int      @map("user_id")
+  movieId   Int      @map("movie_id")
+  rating    Int      // 1-5
+  comment   String   @db.Text
+  validated Boolean  @default(false)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  movie     Movie    @relation(fields: [movieId], references: [id], onDelete: Cascade)
+
+  @@index([movieId])
+  @@index([userId])
+  @@index([validated])
+  @@map("reviews")
+}
