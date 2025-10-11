@@ -1,23 +1,23 @@
 # 🎬 JovaFilms - Sistema de Reseñas Cinematográficas
 
-## 📋 Descripción
+## Descripción
 
 JovaFilms es una plataforma web que permite a usuarios registrados consultar, agregar y reseñar películas. El sistema implementa una arquitectura 3-tier con un servicio batch para validación de contenido.
 
-## 🏗️ Arquitectura
+## Arquitectura
 
 - **Frontend**: React + TypeScript + Vite + TailwindCSS
 - **Backend**: Node.js + Express + TypeScript + Prisma
 - **Base de Datos**: PostgreSQL
 - **Batch Service**: Node.js + node-cron
 
-## 🚀 Requisitos Previos
+## Requisitos Previos
 
 - Node.js 20 LTS o superior
 - PostgreSQL 15 o superior
 - npm o pnpm
 
-## 📦 Instalación
+## Instalación
 
 ### 1. Clonar el repositorio
 
@@ -65,7 +65,7 @@ npx prisma db seed
 cd ..
 ```
 
-## 🎯 Ejecución
+## Ejecución
 
 ### Opción 1: Script de inicio (Recomendado)
 
@@ -102,13 +102,13 @@ npm run dev
 - **Backend API**: http://localhost:3000
 - **API Docs**: http://localhost:3000/api-docs
 
-## 📚 Documentación
+## Documentación
 
 - [Arquitectura del Sistema](./docs/arquitectura.md)
 - [Documentación de API](./docs/api-documentation.md)
 - [Diagramas](./docs/diagrams/)
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Backend tests
@@ -120,12 +120,11 @@ cd frontend
 npm test
 ```
 
-## 👥 Equipo
+## Equipo
 
-- Integrante 1
-- Integrante 2
-- Integrante 3
+- Jovany Gutierrez Vergara
 
-## 📄 Licencia
 
-Este proyecto es parte de la Electiva III 2023-1 - Universidad Antonio Nariño
+## Licencia
+
+Este proyecto es para el curo de electiva 1 2025-2 - Universidad Antonio Nariño
