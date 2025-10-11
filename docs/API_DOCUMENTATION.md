@@ -15,9 +15,9 @@ http://localhost:3000/api
 **Body:**
 ```json
 {
-  "email": "usuario@example.com",
+  "email": "jogutierrez69@uan.edu.do",
   "password": "password123",
-  "name": "Juan Pérez"
+  "name": "Jovany Gutierrez"
 }
 ```
 
@@ -27,8 +27,8 @@ http://localhost:3000/api
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
   "user": {
     "id": 1,
-    "email": "usuario@example.com",
-    "name": "Juan Pérez"
+    "email": "jogutierrez69@uan.edu.do",
+    "name": "Jovany Gutierrez"
   }
 }
 ```
@@ -45,7 +45,7 @@ http://localhost:3000/api
 **Body:**
 ```json
 {
-  "email": "usuario@example.com",
+  "email": "jogutierrez69@uan.edu.do",
   "password": "password123"
 }
 ```
@@ -56,8 +56,8 @@ http://localhost:3000/api
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
   "user": {
     "id": 1,
-    "email": "usuario@example.com",
-    "name": "Juan Pérez"
+    "email": "jogutierrez69@uan.edu.do",
+    "name": "Jovany Gutierrez"
   }
 }
 ```
@@ -81,8 +81,8 @@ Authorization: Bearer {token}
 {
   "user": {
     "id": 1,
-    "email": "usuario@example.com",
-    "name": "Juan Pérez"
+    "email": "jogutierrez69@uan.edu.do",
+    "name": "Jovany Gutierrez"
   }
 }
 ```
@@ -320,7 +320,7 @@ Authorization: Bearer {token}
   "createdAt": "2025-10-10T16:30:00.000Z",
   "user": {
     "id": 1,
-    "name": "Juan Pérez"
+    "name": "Jovany Gutierrez"
   }
 }
 ```
@@ -357,7 +357,7 @@ GET /reviews/movie/1
     "createdAt": "2025-10-10T16:30:00.000Z",
     "user": {
       "id": 1,
-      "name": "Juan Pérez"
+      "name": "Jovany Gutierrez"
     }
   },
   {
@@ -462,8 +462,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiO
 ```json
 {
   "id": 1,
-  "email": "usuario@example.com",
-  "name": "Juan Pérez",
+  "email": "jogutierrez69@uan.edu.do",
+  "name": "Jovany Gutierrez",
   "iat": 1696956000,
   "exp": 1697042400
 }
@@ -506,7 +506,7 @@ X-RateLimit-Reset: 1696957200
 curl -X POST http://localhost:3000/api/auth/register \
   -H "Content-Type: application/json" \
   -d '{
-    "email": "test@example.com",
+    "email": "jogutierrez69@uan.edu.do",
     "password": "password123",
     "name": "Test User"
   }'
@@ -517,7 +517,7 @@ curl -X POST http://localhost:3000/api/auth/register \
 curl -X POST http://localhost:3000/api/auth/login \
   -H "Content-Type: application/json" \
   -d '{
-    "email": "test@example.com",
+    "email": "jogutierrez69@uan.edu.do",
     "password": "password123"
   }'
 ```
@@ -552,7 +552,7 @@ const api = axios.create({
 // Login
 const login = async () => {
   const response = await api.post('/auth/login', {
-    email: 'test@example.com',
+    email: 'jogutierrez69@uan.edu.do',
     password: 'password123'
   });
   
@@ -605,7 +605,7 @@ Importa esta colección en Postman para probar todos los endpoints:
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"password123\",\n  \"name\": \"Test User\"\n}",
+              "raw": "{\n  \"email\": \"jogutierrez69@uan.edu.do\",\n  \"password\": \"password123\",\n  \"name\": \"Test User\"\n}",
               "options": {
                 "raw": {
                   "language": "json"

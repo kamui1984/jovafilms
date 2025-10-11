@@ -22,7 +22,7 @@ JovaFilms es una plataforma web que permite a usuarios registrados consultar, ag
 ### 1. Clonar el repositorio
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/kamui1984/jovafilms.git
 cd Proyecto
 ```
 
