@@ -3,6 +3,7 @@ import { config } from './config/env';
 import { logger } from './utils/logger';
 import { prisma } from './config/database';
 import { validateReviewsJob } from './jobs/validateReviews';
+import { blobStorageService } from './services/blobStorageService';
 
 async function checkDatabaseConnection() {
   try {
@@ -14,9 +15,24 @@ async function checkDatabaseConnection() {
   }
 }
 
+async function initializeBlobStorage() {
+  try {
+    await blobStorageService.initialize();
+    if (blobStorageService.isEnabled()) {
+      logger.info('✅ Azure Blob Storage inicializado');
+    } else {
+      logger.warn('⚠️ Azure Blob Storage no configurado (modo local)');
+    }
+  } catch (error) {
+    logger.error('❌ Error al inicializar Blob Storage:', error);
+    logger.warn('⚠️ Continuando sin Blob Storage...');
+  }
+}
+
 async function startBatchService() {
   try {
     await checkDatabaseConnection();
+    await initializeBlobStorage();
 
     logger.info('🎬 JovaFilms Batch Service iniciado');
     logger.info(`⏰ Intervalo de ejecución: cada ${config.batchIntervalMinutes} minutos`);

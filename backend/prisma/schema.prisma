@@ -43,14 +43,15 @@ model Movie {
 }
 
 model Review {
-  id        Int      @id @default(autoincrement())
-  userId    Int      @map("user_id")
-  movieId   Int      @map("movie_id")
-  rating    Int      // 1-5
-  comment   String   @db.Text
-  validated Boolean  @default(false)
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @updatedAt @map("updated_at")
+  id              Int      @id @default(autoincrement())
+  userId          Int      @map("user_id")
+  movieId         Int      @map("movie_id")
+  rating          Int      // 1-5
+  comment         String   @db.Text
+  validated       Boolean  @default(false)
+  blobStoragePath String?  @map("blob_storage_path") @db.VarChar(500)
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
   
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   movie     Movie    @relation(fields: [movieId], references: [id], onDelete: Cascade)
