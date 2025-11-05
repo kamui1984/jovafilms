@@ -21,10 +21,10 @@ async function startServer() {
   try {
     await checkDatabaseConnection();
 
-    const server = app.listen(PORT, () => {
+    const server = app.listen(Number(PORT), '0.0.0.0', () => {
       logger.info(`🚀 Servidor corriendo en puerto ${PORT}`);
       logger.info(`📱 Entorno: ${config.nodeEnv}`);
-      logger.info(`🌐 URL: http://localhost:${PORT}`);
+      logger.info(`🌐 URL: http://0.0.0.0:${PORT}`);
     });
 
     // Manejo de señales de terminación
