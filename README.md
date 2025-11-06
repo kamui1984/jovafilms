@@ -6,9 +6,22 @@ JovaFilms es una plataforma web que permite a usuarios registrados consultar, ag
 
 ## 🌐 MVP en la Nube
 
-**URL Pública**: `http://<FRONTEND_PUBLIC_IP>` (Configurar después del despliegue)
+**URL Pública**: http://158.23.59.126
 
-**Estado**: ✅ Listo para despliegue en Azure
+**Estado**: ✅ Sistema funcionando y disponible públicamente
+
+**Credenciales de Prueba:**
+- Email: `test@test.com`
+- Password: `password123`
+
+### 🔧 Solución de Problemas de Conexión
+
+Si el frontend carga pero no conecta con el backend, consulta:
+- **[RESUMEN_EJECUTIVO_SOLUCION.md](./RESUMEN_EJECUTIVO_SOLUCION.md)** - Resumen ejecutivo
+- **[CHECKLIST_RAPIDO.md](./CHECKLIST_RAPIDO.md)** - Solución en 15 minutos
+- **[INSTRUCCIONES_VISUALES.md](./INSTRUCCIONES_VISUALES.md)** - Guía paso a paso con comandos
+- **[SOLUCION_PROBLEMA_CONEXION.md](./SOLUCION_PROBLEMA_CONEXION.md)** - Guía completa
+- **[DIAGNOSTICO_PROBLEMA.md](./DIAGNOSTICO_PROBLEMA.md)** - Análisis técnico detallado
 
 ## Arquitectura
 

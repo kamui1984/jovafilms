@@ -1,6 +1,9 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
+// Usar ruta relativa por defecto para producción (funciona con Nginx proxy)
+// En desarrollo, usar VITE_API_URL si está definida, sino localhost
+const API_URL = import.meta.env.VITE_API_URL || 
+  (import.meta.env.DEV ? 'http://localhost:3000/api' : '/api');
 
 export const api = axios.create({
   baseURL: API_URL,
